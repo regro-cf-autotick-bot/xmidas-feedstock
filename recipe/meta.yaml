@@ -1,5 +1,5 @@
 {% set name = "xmidas" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xmidas-{{ version }}.tar.gz
-  sha256: d1650909e99ba18985d73ef6383639f777ce92f95e7092597d0c3889aad06692
+  sha256: 55ba5d36f30bc43e933f58de950d5847344c658455acc490701cef0c8afd4cd3
 
 build:
   number: 0
@@ -33,7 +33,7 @@ requirements:
     - scikit-image
     - scikit-learn
     - scipy >=1.7
-    - silx ==0.15.2
+    - silx
     - tifffile
     - xraylarch >=0.9.57
     - pyqt
