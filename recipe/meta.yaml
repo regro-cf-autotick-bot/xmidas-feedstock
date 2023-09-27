@@ -27,7 +27,6 @@ requirements:
     - packaging
     - pandas
     - pyqtgraph >=0.12.2
-    - pyshortcuts
     - pystackreg
     - python >=3.7
     - scikit-image
