@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xmidas-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xmidas-{{ version }}.tar.gz
   sha256: 116d2f893d4896efb36d283bba9a11bbedc71d51ff3e391c45ba01a5d7859ad4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - xmidas = xmidas.main:start_xmidas
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - h5py
     - numpy
@@ -28,7 +28,7 @@ requirements:
     - pandas
     - pyqtgraph >=0.12.2
     - pystackreg
-    - python >=3.7
+    - python >={{ python_min }}
     - scikit-image
     - scikit-learn
     - scipy >=1.7
@@ -39,6 +39,8 @@ requirements:
     - opencv
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - xmidas
     - xmidas.uis
